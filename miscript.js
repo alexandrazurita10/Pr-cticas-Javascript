@@ -36,7 +36,7 @@ function agregar() {
 }
 
 function aumentar() {
-    document.getElementById("div1").append ("Hola <br>");
+    document.getElementById("div1").append("Hola <br>");
 }
 
 function aumentar_con_html() {
@@ -50,3 +50,28 @@ function vaciar() {
 function eliminar() {
     document.getElementById("div1").remove();
 }
+
+document.getElementById("btn_cambiar_fondo").addEventListener("click", function(){
+    document.getElementById("midiv").style.backgroundColor = "green";
+});
+
+document.getElementById("btn_cambiar_color").addEventListener("click", function(){
+    document.getElementById("midiv").style.color = "white";
+});
+
+document.getElementById("btn_borde").addEventListener("click", function(){
+    document.getElementById("midiv").style.border = "3px solid black";
+});
+
+//funciones lambda
+document.querySelector("#btn_negrita").onclick = () => {
+    document.querySelector("#midiv").style.fontWeight = "bold";
+};
+
+document.querySelector("#btn_clase").onclick = () => {
+    document.querySelector("#midiv").classList.add("miestilo");
+};
+
+document.querySelector("#btn_quitar_clase").onclick = () => {
+    document.querySelector("#midiv").classList.remove("miestilo");
+};
